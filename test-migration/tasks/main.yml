@@ -1,0 +1,17 @@
+---
+# tasks file for test-migration
+- name: running multiple commands using command module
+  hosts: all
+  tasks:
+    - command: "{{ item }}"
+      register: cmd
+      loop:
+        - ls
+        - cat /etc/redhat-release
+        - hostname
+        - fdisk -l
+        - parted -l
+
+    - debug:
+        var: cmd
+
