@@ -2,6 +2,6 @@
 - name: Example playbook
   hosts: '{{ target }}'
   roles:
-    - { role: init }
+    - { role: siva-role }
     - { role: deploy }
     - { role: cleanup }
