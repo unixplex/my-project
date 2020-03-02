@@ -3,5 +3,4 @@
   hosts: '{{ target }}'
   roles:
     - { role: siva-role }
-    - { role: deploy }
-    - { role: cleanup }
+    - { role: test-migration }
