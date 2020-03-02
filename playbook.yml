@@ -1,0 +1,7 @@
+---
+- name: Example playbook
+  hosts: '{{ target }}'
+  roles:
+    - { role: init }
+    - { role: deploy }
+    - { role: cleanup }
